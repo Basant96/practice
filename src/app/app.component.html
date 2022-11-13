@@ -1,0 +1,52 @@
+<h1>Data Table</h1>
+
+<input type="text" placeholder="search" [(ngModel)]="srchTxt">
+<table id="example" class="display" cellspacing="0" width="100%">
+
+	<thead>
+		<tr>
+			<th>id</th>
+      <th>name<i (click)="onSortClick($event)" class="fa fa-arrows-v"></i></th>
+			<th>country</th>
+			<th>imo</th>
+			<th>mmsi</th>
+			<th>callsign</th>
+			<th>category</th>
+			<th>vessel_type</th>
+			<th>length</th>
+			<th>width</th>
+			<th>dwt</th>
+			<th>gross_tonnage</th>
+			<th>last_update</th>
+			<th>location</th>
+      <th>public_link</th>
+		</tr>
+	</thead>
+
+  <tbody>
+    <tr *ngFor="let user of usersFilteredList">
+      <td>{{user.id}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.country}}</td>
+      <td>{{user.imo}}</td>
+      <td>{{user.callsign}}</td>
+      <td>{{user.category}}</td>
+      <td>{{user.vessel_type}}</td>
+      <td>{{user.length}}</td>
+      <td>{{user.width}}</td>
+      <td>{{user.dwt}}</td>
+      <td>{{user.gross_tonnage}}</td>
+      <td>{{user.last_update}}</td>
+      <td>{{user.location}}</td>
+      <td>{{user.public_link}}</td>
+
+
+    </tr>
+  </tbody>
+
+</table>
+<div>
+  <a href="" (click)="previous($event)">previous</a><br>
+  <a href="" (click)="next($event)">next</a>
+
+</div>
